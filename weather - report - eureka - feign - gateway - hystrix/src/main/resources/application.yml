@@ -1,0 +1,26 @@
+
+# 热部署静态文件
+spring:
+  thymeleaf:
+    cache: false
+  application:
+    name: weather-report-eureka-feign-gateway-hystrix
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.1.18:8761/eureka/
+
+server:
+  port: 8084
+
+
+feign:
+  client:
+    config:
+      feignName:
+        connectTimeout: 5000
+        readTimeout: 5000
+  hystrix:
+    enabled: true
+
+

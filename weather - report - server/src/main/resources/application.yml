@@ -1,0 +1,6 @@
+
+ # 热部署静态文件
+  thymeleaf:
+    cache: false
+
+

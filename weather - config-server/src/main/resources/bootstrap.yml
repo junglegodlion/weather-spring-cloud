@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: weather-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/junglegodlion/spring-cloud-config.git
+          search-paths: respo
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.1.18:8761/eureka/
+server:
+  port: 8888
